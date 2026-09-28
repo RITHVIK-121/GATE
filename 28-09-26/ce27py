@@ -1,0 +1,18 @@
+import numpy as np
+
+# Define the given matrix A
+A = np.array([[9, 15], 
+              [15, 50]])
+
+# Perform Cholesky decomposition (A = L @ L.T)
+L = np.linalg.cholesky(A)
+
+# Extract l_22 (row index 1, column index 1 in 0-based indexing)
+l22 = L[1, 1]
+
+# Calculate the absolute value
+abs_l22 = abs(l22)
+
+print(f"Lower triangular matrix L:\n{L}\n")
+print(f"The value of |l22| is: {int(round(abs_l22))}")
+
